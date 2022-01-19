@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  min-height: 8vh;
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+}
+
+.links {
+  width: 15%;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.title p {
+  font-weight: 100;
+  color: gray;
+}
+
+.socials {
+  width: 15%;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  padding: 15vh 25px 0px 25px;
+}
+
+#projects {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.project-1,
+.project-2,
+.project-3 {
+  width: 400px;
+  height: 580px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-desc p {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.underline {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+#about {
+  padding-top: 30px;
+  width: 700px;
+  max-width: 100%;
+}
+
+#about h2 {
+  font-size: 2rem;
+}
+
+#about p {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 100;
+  padding-bottom: 30px;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 710px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .links {
+    background-color: white;
+  }
+
+  .socials,
+  .links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    width: 100%;
+    padding: 25px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40%;
+  }
+
+  .nav-active {
+    transform: translateY(0%);
+  }
+
+  .socials ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44%;
+  }
+
+  .title {
+    margin: 0 auto;
+  }
+}
